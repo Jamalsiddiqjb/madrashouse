@@ -46,6 +46,7 @@ body {
     transform: translateX(-200px);
     opacity: 0;
     transition: transform 0.5s ease-in-out;
+    z-index: 100;
 }
 
 .side-navbar-link {
@@ -58,7 +59,7 @@ body {
 }
 
 .side-navbar-link a:hover {
-    text-decoration: underline;
+    color: #f7fafc;
 }
 
 /*header*/
@@ -70,12 +71,15 @@ body {
     padding: 50px;
 }
 
-.header-button {
+.header-a {
+    text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 10px;
+    position: absolute;
+    top: 170px;
     background-color: #1D232C;
     color: white;
     cursor: pointer;
@@ -142,6 +146,68 @@ body {
     color: white;
 }
 
+/*newsletter*/
+.newsletter {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.news-box {
+    background-color: gold;
+    position: relative;
+    min-height: 100px;
+    z-index: 0;
+    padding: 40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.txt {
+    flex-basis: 40%; /* Adjust the width of the text column */
+    padding: 20px;
+}
+
+.txt p {
+    font-size: 14px;
+}
+
+.mail-box {
+    flex-basis: 40%; /* Adjust the width of the mail box column */
+    width: 700px;
+    border: solid black 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+}
+  
+.mail-box input {
+    /*margin-bottom: 10px; /* Add some space between the input and button */
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.news-box .btn {
+    flex-basis: 10%;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: transparent;
+    border: solid black 1px;
+    margin-left: 20px;
+}
+
+.news-box .btn:hover {
+    color: white;
+    border: none;
+}
+
 /*product*/
 .product-section {
     margin-top: 20px;
@@ -168,35 +234,312 @@ body {
     outline: none;
 }
 
+.products {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .product-item {
     text-align: center;
-    flex: 1 0 100px;
-    margin: 10px;
-    border-style: solid;
-    padding: 100px;
+    flex-basis: 20%;
+    background-color: #f2f4f7;
+}
+
+.product-item:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .product-item img {
     width: 200px;
-    height: 270px;
+    height: 200px;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .product-item p {
     font-size: 18px;
     color: #333;
     margin-bottom: 20px;
-    width: 200px;
     text-decoration: none;
     font-size: 14px;
+    text-align: center;
 }
+
+#p1:hover, #p2:hover, #p3:hover, #p4:hover, #p5:hover, #p6:hover, #p7:hover, #p8:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+}
+
+/*login*/
+.form-login {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.login-form {
+    background-color: gold;
+    position: relative;
+    min-height: 50vh;
+    z-index: 0;
+    padding: 40px;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-login {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.login-form h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1D232C;
+}
+
+.login-form h2 {
+    line-height: 40px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #1D232C;
+    text-align: center;
+}
+
+.main-login {
+    position: relative;
+    display: flex;
+    margin: 30px 0;
+}
+
+.content-login {
+    flex-basis: 50%;
+    padding: 3em 3em;
+    background: white;
+    box-shadow: 2px 9px 49px -17px rgba(0,0,0,0.1);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.login-img {
+    flex-basis: 50%;
+    background: #bcd9f0;
+    background-size: cover;
+    padding: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    align-items: center;
+    display: grid;
+    padding-left: 100px;
+}
+
+.login-form p {
+    color: #666;
+    font-size: 16px;
+    line-height: 25px;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.btn, button, input {
+    border-radius: 35px;
+}
+
+.btn:hover, button:hover {
+    color: #1D232C;
+    transition: 0.5s ease;
+}
+
+.login-form a {
+    text-decoration: none;
+}
+
+.login-form form {
+    margin: 30px 0;
+    padding-right: 30px;
+}
+
+.login-form input {
+    outline: none;
+    margin-bottom: 15px;
+    font-stretch: 16px;
+    color: #999;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    background: #f7fafc;
+    transition: 0.3s ease;
+}
+
+.login-form input:focus {
+    background: transparent;
+    border: 1px solid rgba(236, 204, 18, 0.2);
+}
+
+.login-form button {
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    background: gold;
+    border: none;
+    padding: 14px 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.login-form .account a {
+    color: gold;
+}
+
+.login-form .account a:hover {
+    text-decoration: underline;
+}
+
+.form-signup {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.signup-form {
+    background-color: gold;
+    position: relative;
+    min-height: 50vh;
+    z-index: 0;
+    padding: 40px;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-signup {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.signup-form h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #1D232C;
+}
+
+.signup-form h2 {
+    line-height: 40px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #1D232C;
+    text-align: center;
+}
+
+.main-signup {
+    position: relative;
+    display: flex;
+    margin: 30px 0;
+}
+
+.content-signup {
+    flex-basis: 50%;
+    padding: 3em 3em;
+    background: white;
+    box-shadow: 2px 9px 49px -17px rgba(0,0,0,0.1);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.signup-img {
+    flex-basis: 50%;
+    background: #bcd9f0;
+    background-size: cover;
+    padding: 40px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    align-items: center;
+    display: grid;
+    padding-left: 100px;
+}
+
+.btn, button, input {
+    border-radius: 35px;
+}
+
+.btn-signup:hover, button:hover {
+    color: #1D232C;
+    transition: 0.5s ease;
+}
+
+.signup-form form {
+    margin: 30px 0;
+    padding-right: 30px;
+}
+
+.signup-form input {
+    outline: none;
+    margin-bottom: 15px;
+    font-stretch: 16px;
+    color: #999;
+    text-align: left;
+    padding: 14px 20px;
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    background: #f7fafc;
+    transition: 0.3s ease;
+}
+
+.signup-form input:focus {
+    background: transparent;
+    border: 1px solid rgba(236, 204, 18, 0.2);
+}
+
+.signup-form button {
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    background: gold;
+    border: none;
+    padding: 14px 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.back-login {
+    color: #666;
+    text-align: center;
+}
+
+.back-login a {
+    text-decoration: none;
+    color: gold;
+}
+
+.back-login a:hover {
+    text-decoration: underline;
+}
+
+
 
 
 /* media query */
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:735px) {
     .navbar-menu-toggle {
-        display: block;
+        display: inline;
+        z-index: 1;
     }
 
     .navbar-links {
@@ -205,6 +548,11 @@ body {
 
     .header-img {
         display: none;
+    }
+
+    .header-a {
+        margin-top: 70px;
+        z-index: -100;
     }
 
     .service-container-1 {
@@ -218,5 +566,66 @@ body {
     .new-arrival-container {
         flex: 1 0 50%;
         width: 50%;
+    }
+
+    .newsletter {
+        display: block;
+    }
+
+    .login-form .main-login {
+        flex-direction: column;
+    }
+
+    .login-form form {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .login-img {
+        border-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        order: 2;
+    }
+
+    .container-login {
+        order: 1;
+        border-radius: 0;
+
+    }
+
+    .signup-form .main-signup {
+        flex-direction: column;
+    }
+
+    .signup-form form {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    .signup-img {
+        border-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        order: 2;
+    }
+
+    .container-signup {
+        order: 1;
+        border-radius: 0;
+
+    }
+
+    .news-box {
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    .news-box .btn {
+        margin-top: 30px;
+    }
+
+    .mail-box {
+        width: 500px;
     }
 }
